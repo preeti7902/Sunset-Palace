@@ -1,0 +1,502 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: "Baloo Chettan 2", cursive;
+	line-height: 1.5;
+}
+.title-text{
+	font-size: 40px;
+	text-decoration: center;
+}
+/* -----Nav bar--------*/
+#menu-bar{
+	width: 50px;
+	height: 10px;
+	margin: 50px 10px 10px 20px;
+	position: fixed;
+	z-index:1;
+	cursor: pointer;
+}
+.bar{
+	background: white;
+	border-radius: 10%;
+	transition: 3s;
+}
+#bar1{
+	width: 40px;
+	height: 7px;
+	transform: translateY(-4px);
+}
+#bar2{
+	width: 40px;
+	height: 7px;
+}
+#bar3{
+	width: 40px;
+	height: 7px;
+	transform: translateY(4px);
+}
+.change .bar{
+	background: #000000;
+}
+.change#bar1{
+	transform: translateY(6px);
+	rotate: z(45deg);
+}
+.change#bar3{
+    transform: translateY(-15px);
+	rotate: z(-45deg);
+}
+.change#bar2{
+   opacity: 0;
+}
+.nav li a{
+	text-decoration: none;
+	color:black;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.nav li:hover{
+	color: rgb(121, 107, 107);
+	padding-left: 10px;
+}
+.nav li{
+	margin: 20px 10px 10px 20px;
+	padding: top;
+	list-style-type: none;
+}
+.nav{
+	display: none;
+}
+.change-btn{
+	display: block;
+}
+/* -----end of Nav bar--------*/
+.header{
+	padding-bottom: 170px;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
+    url('images/hero.JPG') center/cover no-repeat fixed;
+    margin-top: auto;
+}
+.hero{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%; 
+}
+.hero .title{
+	color:rgb(245, 183, 50);
+	font-family: 'Times New Roman', Times, serif; 
+	font-size:100px;
+	text-decoration: overline underline;
+}
+.hero-button{
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 20px 50px ;
+	border-radius: 200px;
+	font-weight: bold;
+	background: rgb(255, 103, 103);
+	color: #fff;
+	cursor: pointer;
+	border: 2px solid rgb(245, 183, 50);
+	margin-top: 10px;
+}
+.hero-button:hover{
+    background: #fff;
+    color:rgb(245, 183, 50);
+    border: none;
+}
+.pulsate{
+    animation: pulsate 4s ease-in-out;
+    animation-iteration-count:infinite;
+    opacity: .3;
+    color: black;
+}
+@keyframes pulsate{
+    0%{
+        opacity: .3;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .3;
+    }
+
+}
+
+/*------about us-------*/
+#about{
+	padding: 40px;
+	color:black;
+}
+.about{
+	margin: 30px 0;
+	display: flex;
+}
+.about-icon .fas{
+	font-size: 60px;
+	color:rgba(71, 25, 25, 0.863);
+	margin-right: 20px;
+}
+.about-subtitle{
+	text-transform: capitalize;
+	color: rgba(71, 25, 25, 0.863);
+	font-size: 30px;
+}
+.about-info{
+	margin-top: 10px;
+	line-height: 1.5;
+}
+.about-subtitle:hover{
+	transition: transform 2s ease, color 2s ease;
+	transform: translate(-10px);
+	color: orangered;
+	cursor: pointer;
+}
+@media screen and (min-width:576px){
+	.about-center{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.about{
+		flex: 0 0 calc(50% - 16px);
+	}
+}
+@media screen and (min-width: 972px){
+	.about{
+		flex: 0 0 calc(33.3% - 16px);
+	}
+}
+/*---end of about us---*/
+/*-----menu section-----*/
+
+.menu-image{
+	min-height: 80vh;
+	background: url(images/colorfulplate.JPG) center/cover fixed no-repeat;
+}
+.menu-text{
+	min-height: 80vh;
+	align-items: center;
+	background:rgb(245, 183, 50);
+	columns: black;
+	padding: 40px 0;
+}
+.menu-text-center{
+	width: 90%;
+	margin: 0 auto;
+}
+.menu-text h1{
+	font-size: 40px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.menu-text p{
+	margin: 20px 0;
+	line-height: 2;
+}
+.menu-text a{
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	border-radius: 200px;
+	font-weight: bold;
+	background: rgba(10, 10, 10);
+	color: orange;
+	cursor: pointer;
+	border: 2px solid #000;
+}
+.menu-text a:hover{
+	color: orange;
+	background: #fff;
+	border: none;
+}
+@media screen and (min-width: 776px){
+	.menu{
+		display: flex;
+	}
+	.menu-text{
+		flex: 0 0 30%;
+	}
+	.menu-image{
+		flex: 0 0 70%;
+		clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 40% 40%, 100% 0);
+	}
+	.menu{
+		background: rgb(245, 183, 50);
+	}
+}
+/*---end of menu section----*/
+/*-------Social Icons---------*/
+#social-icons{
+	height: 150px;
+	background: #fff;
+	text-align: center;
+	padding: 50px 0 50px 0;
+}
+#social-icons a{
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 5px;
+	font-size: 40px;
+	border-radius: 5px;
+	transition: transform 2s ease, color 2s ease;
+}
+#social-icons a:hover{
+	transform: translateY(-20px);
+} 
+.facebook{
+	color: #3b5998;
+}
+.instagram{
+	color: #e1306c;
+}
+.envelope{
+	color: #db4a39;
+}	
+.pinterest{
+    color:rgb(117, 13, 13);
+}	
+/*-------end of social icons-------*/
+/*------Numbers-----*/
+.number{
+	text-align: center;
+	background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
+	url(images/background.JPG) center/cover fixed no-repeat;
+	padding: 60px 0;
+	color: rgb(250, 76, 45);
+}
+.number p{
+	font-style: 30px;
+	font-weight: bold;
+}
+.number:hover{
+	color:maroon;
+}
+.number .fas{
+	font-size: 60px;
+	margin: 20px 0;
+} 
+.number h3{
+	text-transform: uppercase;
+}
+@media screen and (min-width: 400px){
+	#numbers{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (min-width: 800px){
+	#numbers{
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+/*--------End of Numbers------*/
+/*--------Cards---------*/
+#food{
+	padding: 10px;
+}
+.food-container{
+	max-width: 70vw;
+	margin: 0 auto;
+}
+.food-card{
+	position: relative;
+	background: linear-gradient(rgba(205, 96, 0, 0.7), rgba(205, 96, 0, 0.7));
+	margin: 20px 0;
+	color:#000;
+	overflow: hidden;
+	padding: 3px;
+	border-radius: 10px;
+	border:1px solid orange;
+	box-shadow: 1px 1px 1px 1px #cd6100;
+}
+#food img{
+	width:100%;
+	min-height:100%;
+	display: block;
+	transition: transform 4s;
+}
+.img-text{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translateY(-50%, -50%);
+	text-align: center;
+	opacity: 0;
+	transition: opacity 4s;
+}
+.img-footer{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 50px;
+	font-size: 20px;
+	opacity: 0;
+	color: #000;
+	transition: opacity 4s;
+}
+.img-text h1{
+	font-size: 30px;
+	margin-bottom: 10px;	
+}
+.food-card:hover img{
+	opacity: 0.4;
+	transform: scale(1.3);
+}
+.food-card:hover .img-text, .food-card:hover .img-footer{
+	opacity: 1;
+}
+.food-btn{
+	display: inline-block;
+	background: black;
+	text-decoration: capitalize;
+	padding: 12px 18px;
+	color:#fff;
+	font-weight: bold;
+	border-radius: 150px;
+	cursor: pointer;
+	margin-top: 16px;
+	transition: all 0.3s ease-in-out;
+	font-size: 18px;
+	outline: none;
+}
+.food-card:hover{
+	color: orange;
+	background: #000;
+	outline: none;
+}
+.fas{
+	font-size: 30px;
+}
+@media screen and (min-width: 555px){
+	.food-container{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 16px ;
+	}
+	}
+	@media screen and (min-width: 960px){
+		.food-container{
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-column-gap: 16px ;
+		}	
+}
+/*-----------end of cards--------------*/
+/*========gallery=========*/
+* {
+	box-sizing: border-box;
+  }
+  img {
+	vertical-align: middle;
+  }
+    
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+	position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+	display: none;
+	max-width: 500px;
+	position: relative;
+	margin: auto;
+	}
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+	cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+	cursor: pointer;
+	position: absolute;
+	top: 30%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+  }
+    /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+    /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+    /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+    /* Container for image text */
+  .caption-container {
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: white;
+  }
+    .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+    /* Six columns side by side */
+  .column {
+	float: left; 
+	width: 16.66%;
+	background-color: black;
+  }
+    /* Add a transparency effect for thumnbail images */
+  .demo {
+	opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+	opacity: 1;
+  }
+  /* Address */
+  #address{
+	padding: 50px;
+	background: linear-gradient(rgba(255, 200, 99, 0.3), rgb(255, 255, 255)),
+    url('images/map.jpg') center/cover no-repeat fixed;
+    margin-top: auto;
+}
+.address{
+	opacity: 0.6;
+}
+.row, .col-md-4{
+	font-weight: 500;
+}
